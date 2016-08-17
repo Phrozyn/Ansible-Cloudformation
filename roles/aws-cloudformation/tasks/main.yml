@@ -1,0 +1,18 @@
+---
+- name: Create instance in infosec-dev vpc using cloudformation
+  cloudformation:
+    stack_name: "infosec-dev-ansible-eshost4"
+    state: "present"
+    region: "us-west-2"
+    disable_rollback: true
+    template: "roles/aws-cloudformation/files/aws-cloudformation.json"
+    template_parameters:
+      InstanceName: "mozdefes4"
+      KeyName: "asmith-key"
+      PrimaryIPAddress: "10.191.5.104"
+      SSHLocation: "70.119.111.120/32"
+      InstanceType: "t2.medium"
+      SubnetId: "subnet-6c69b134"
+      VpcId: "vpc-5ede8b3a"
+    tags:
+      Stack: "infosec-dev-ansible-eshost4"

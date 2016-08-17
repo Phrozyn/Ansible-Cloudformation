@@ -1,0 +1,15 @@
+[localhost]
+127.0.0.1 ansible_python_interpreter=/Library/Frameworks/Python.framework/Versions/2.7/bin/python
+
+[mozdef-banmanager]
+000.000.000.000 ansible_user=root
+
+
+[esc2]
+esc2.hostname.com ansible_user=root
+[esc3]
+esc3.hostname.com ansible_user=root
+[esc4]
+esc4.hostname.com ansible_user=root
+[esc1]
+esc1.hostname.com ansible_user=root
